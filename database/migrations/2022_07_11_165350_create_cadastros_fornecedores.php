@@ -19,6 +19,7 @@ class CreateCadastrosFornecedores extends Migration
             $table->string('cpf', 20)->nullable();
             $table->string('cnpj', 20)->nullable();
             $table->string('razao', 50);
+            $table->string('tipo', 20);
             $table->string('email')->nullable();  
             $table->string('telefone', 11);
             $table->string('cep', 10);

@@ -28,6 +28,21 @@
                                         placeholder="Digite o CPF" value="{{ $fornecedor->cpf ?? '' }}" />
                                 </div>
                             </div>
+                                        <div class="col-md-6 col-12">
+                            <div class="form-group">
+                                <label class="form-label" for="tipo">Tipo fornecedor</label>
+                                <select name="tipo" id="tipo" class="form-control" required>
+                                    <option value=""></option>
+                                    @foreach($fornecedor->getTipos() as $value => $label)
+                                    <option 
+                                        {{ isset($fornecedor->tipo) && $fornecedor->tipo == $value ? 'selected="selected"' : '' }}
+                                        value="{{ $value }}">
+                                        {{ $label }}
+                                    </option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
                             <div class="col-md-6 col-12">
                                 <div class="form-group">
                                     <label class="form-label" for="nome">CNPJ</label>

@@ -11,6 +11,10 @@ class Fornecedor extends Model implements Auditable
     use HasFactory, \OwenIt\Auditing\Auditable;
 
     protected $table = "fornecedor";
+    protected $tipos = [
+        'proprio' => 'Fornecedor próprio',
+        'externo' => 'Fornecedor externo',
+    ];
 
     public function contatos()
     {
@@ -31,5 +35,15 @@ class Fornecedor extends Model implements Auditable
     public function scopeAtivo($query)
     {
         return $query->where('ativo', 1);
+    }
+
+    public function getTipo()
+    {
+        return $this->tipos[$this->tipo];
+    }
+
+    public function getTipos()
+    {
+        return $this->tipos;
     }
 }

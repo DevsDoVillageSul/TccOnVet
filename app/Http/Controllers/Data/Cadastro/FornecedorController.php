@@ -20,6 +20,7 @@ class FornecedorController extends Controller
             $fornecedor->razao = $request->razao;
             $fornecedor->cpf = $request->cpf;
             $fornecedor->cnpj = $request->cnpj;
+            $fornecedor->tipo = $request->tipo;
             $fornecedor->email = $request->email;
             $fornecedor->telefone = $request->telefone;
             $fornecedor->cep = $request->cep;
