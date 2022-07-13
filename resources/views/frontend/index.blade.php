@@ -195,7 +195,7 @@
                     </div>
                 </div>
                 <div class="ud-about-image">
-                    <img src="images\about\controles.png" alt="about-image" />
+                    <img src="images\about\newsidebar.png" alt="about-image" />
                 </div>
             </div>
         </div>
@@ -381,9 +381,9 @@
                 <div class="col-lg-12">
                     <div class="ud-section-title text-center mx-auto">
                         <span>FAQ</span>
-                        <h2>Alguma pergunta? Respondidas</h2>
+                        <h2>Alguma pergunta?</h2>
                         <p>
-                            Existem muitas duvidas em comum, acesse nosso FAQ para responder algumas de suas duvidas!.
+                            Existem muitas dúvidas em comum, acesse nosso FAQ para enviar algumas de suas duvidas! Abaixo você pode consultar algumas questões já respondidas.
                         </p>
                     </div>
                 </div>
@@ -398,11 +398,11 @@
                                 <span class="icon flex-shrink-0">
                                     <i class="lni lni-chevron-down"></i>
                                 </span>
-                                <span>Como usar o Sistema OnVet?</span>
+                                <span>Como aprenderei a utilizar o OnVet?</span>
                             </button>
                             <div id="collapseOne" class="accordion-collapse collapse">
                                 <div class="ud-faq-body">
-                                    Resposta...
+                                    Não se preocupe! Oferecemos treinamento e suporte completo para novos (e velhos, se for necessário) usuários!
                                 </div>
                             </div>
                         </div>
@@ -414,11 +414,11 @@
                                 <span class="icon flex-shrink-0">
                                     <i class="lni lni-chevron-down"></i>
                                 </span>
-                                <span>Como baixar sistema OnVet?</span>
+                                <span>É necessário baixar algum tipo de arquivo para utilizá-lo?</span>
                             </button>
                             <div id="collapseTwo" class="accordion-collapse collapse">
                                 <div class="ud-faq-body">
-                                    Resposta...
+                                    Não é preciso! Nosso sistema é totalmente online.
                                 </div>
                             </div>
                         </div>
@@ -430,11 +430,11 @@
                                 <span class="icon flex-shrink-0">
                                     <i class="lni lni-chevron-down"></i>
                                 </span>
-                                <span>Duvida geral "colocar aqui"?</span>
+                                <span>Consigo baixar os relatórios entregues pelo sistema?</span>
                             </button>
                             <div id="collapseThree" class="accordion-collapse collapse">
                                 <div class="ud-faq-body">
-                                    Resposta...
+                                    Sim! Oferecemos as opções de arquivos "PDF" e "EXCEL", basta selecionar o que prefere.
                                 </div>
                             </div>
                         </div>
@@ -448,11 +448,11 @@
                                 <span class="icon flex-shrink-0">
                                     <i class="lni lni-chevron-down"></i>
                                 </span>
-                                <span>Duvida geral "colocar aqui"?</span>
+                                <span>Como as funcionalidades do sistema são divididas?</span>
                             </button>
                             <div id="collapseFour" class="accordion-collapse collapse">
                                 <div class="ud-faq-body">
-                                    Resposta...
+                                    Em duas abas. A aba zootécnica, e a aba financeira.
                                 </div>
                             </div>
                         </div>
@@ -464,11 +464,11 @@
                                 <span class="icon flex-shrink-0">
                                     <i class="lni lni-chevron-down"></i>
                                 </span>
-                                <span>Duvida geral "colocar aqui"?</span>
+                                <span>Meus dados estão seguros?</span>
                             </button>
                             <div id="collapseFive" class="accordion-collapse collapse">
                                 <div class="ud-faq-body">
-                                    Resposta...
+                                    Com toda certeza. Cumprimos os requisistos de segurança da informação e utilizamos servidor de alta qualidade.
                                 </div>
                             </div>
                         </div>
@@ -480,11 +480,11 @@
                                 <span class="icon flex-shrink-0">
                                     <i class="lni lni-chevron-down"></i>
                                 </span>
-                                <span>Duvida geral "colocar aqui"?</span>
+                                <span>O que preciso para realizar meu cadastro?</span>
                             </button>
                             <div id="collapseSix" class="accordion-collapse collapse">
                                 <div class="ud-faq-body">
-                                    Resposta...
+                                    Basta ter seus documentos em mãos, entrar em contato conosco e contratar o plano que desejar!
                                 </div>
                             </div>
                         </div>
