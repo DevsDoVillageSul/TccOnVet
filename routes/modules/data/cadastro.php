@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Data\Cadastro\FuncionarioController;
 use App\Http\Controllers\Data\Cadastro\FornecedorController;
+use App\Http\Controllers\Data\Cadastro\AreaController;
 use App\Http\Controllers\Data\Cadastro\TanqueController;
 use App\Http\Controllers\Data\Cadastro\IatfController;
 use App\Http\Controllers\Data\Cadastro\PastagemController;
@@ -15,6 +16,12 @@ Route::group(['prefix' => 'cadastros'], function () {
 Route::group(['prefix' => 'cadastros'], function () {
     Route::group(['prefix' => 'fornecedores'], function () {
         Route::post('save', [FornecedorController::class, 'save']);
+    });
+});
+
+Route::group(['prefix' => 'cadastros'], function () {
+    Route::group(['prefix' => 'areas'], function () {
+        Route::post('save', [AreaController::class, 'save']);
     });
 });
 

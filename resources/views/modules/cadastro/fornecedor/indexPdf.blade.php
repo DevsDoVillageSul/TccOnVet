@@ -5,41 +5,45 @@
     <thead>
         <tr>
             <th>Nome</th>
-            <th>Sexo</th>
+            <th>Tipo</th>
             <th>CPF</th>
-            <th>Função</th>
-            <th>Telefone</th>
+            <th>CNPJ</th>
+            <th>Razão Social</th>
+            <th>E-mail</th>
             <th>Bairro</th>
             <th>Cidade / UF</th>
             <th>Status</th>
         </tr>
     </thead>
     <tbody>
-        @foreach($funcionarios as $funcionario)
+        @foreach($fornecedores as $fornecedor)
         <tr>
             <td>
-                {{ $funcionario->nome }}
+                {{ $fornecedor->nome }}
             </td>
             <td>
-                {{ $funcionario->getSexo() }}
+                {{ $fornecedor->getTipo() }}
             </td>
             <td>
-                {{ $funcionario->cpf }}
+                {{ $fornecedor->cpf }}
             </td>
             <td>
-                {{ $funcionario->funcao }}
+                {{ $fornecedor->cnpj }}
             </td>
             <td>
-                {{ $funcionario->telefone }}
+                {{ $fornecedor->razao }}
             </td>
             <td>
-                {{ $funcionario->bairro }}
+                {{ $fornecedor->telefone }}
             </td>
             <td>
-                {{ $funcionario->cidade }} - {{ $funcionario->uf }}
+                {{ $fornecedor->bairro }}
             </td>
             <td>
-                {!! Helper::getAtivoInativo($funcionario->ativo, true) !!}
+                {{ $fornecedor->cidade }} - {{ $fornecedor->uf }}
+            </td>
+            <td>
+                {!! Helper::getAtivoInativo($fornecedor->ativo, true) !!}
             </td>
         </tr>
         @endforeach

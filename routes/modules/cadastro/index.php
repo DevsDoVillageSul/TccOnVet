@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Cadastro\FuncionarioController;
 use App\Http\Controllers\Cadastro\FornecedorController;
+use App\Http\Controllers\Cadastro\AreaController;
 use App\Http\Controllers\Cadastro\TanqueController;
 use App\Http\Controllers\Cadastro\IatfController;
 use App\Http\Controllers\Cadastro\PastagemController;
@@ -40,6 +41,24 @@ Route::group(['prefix' => 'cadastros'], function () {
         Route::get('/create/{id}', [FornecedorController::class, 'create'])
             ->name('fornecedores-create')
             ->middleware('checkPermission:12')
+        ;
+    });
+
+    Route::group(['prefix' => 'areas'], function () {
+        // listagem
+        Route::any('/', [AreaController::class, 'index'])
+            ->name('areas-index')
+            ->middleware('checkPermission:13')
+        ;
+        // delete
+        Route::get('/delete/{id}', [AreaController::class, 'destroy'])
+            ->name('areas-destroy')
+            ->middleware('checkPermission:13')   
+        ;
+        // create
+        Route::get('/create/{id}', [AreaController::class, 'create'])
+            ->name('areas-create')
+            ->middleware('checkPermission:13')
         ;
     });
 
