@@ -1,0 +1,32 @@
+.anamnese-search {
+  background-size: cover;
+  background-color: rgba(115, 103, 240, 0.12) !important;
+}
+.anamnese-search .anamnese-search-input .input-group:focus-within {
+  box-shadow: none;
+}
+
+.anamnese-contact .anamnese-contact-card {
+  background-color: rgba(186, 191, 199, 0.12);
+}
+
+@media (min-width: 992px) {
+  .anamnese-search .card-body {
+    padding: 8rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .anamnese-search .card-body {
+    padding: 6rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .anamnese-search .anamnese-search-input .input-group {
+    width: 576px;
+    margin: 0 auto;
+  }
+
+  .anamnese-navigation {
+    height: 550px;
+  }
+}

@@ -87,17 +87,18 @@ $configData = Helper::applClasses();
             @endif
             {{-- Foreach menu item ends --}}
             <hr>
-            <div>
-
+            <div class="shadow-bottom" >
         </ul>
-        <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+        <ul class="justify-content-center nav nav-pills" id="main-menu-navigation" data-menu="menu-navigation">
             <li class="nav-item">
-                <a class="dropdown-item " href="{{ url('logout') }}">
-                    <i class="mr-60" data-feather="log-out"></i>Sair
+            
+                <a class="dropdown-item nav-link" href="{{ url('logout') }}">
+                
+                    <i class="mr-60" data-feather="log-out"></i>Sair 
                 </a>
+                
             </li>
         </ul>
-
 
     </div>
 
