@@ -393,7 +393,7 @@
                 <div class="col-lg-6">
                     <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
                         <div class="accordion">
-                            <button class="ud-faq-btn collapsed" data-bs-toggle="collapse"
+                            <button class="ud-faq-btn collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseOne">
                                 <span class="icon flex-shrink-0">
                                     <i class="lni lni-chevron-down"></i>
@@ -657,7 +657,6 @@
     <!-- ====== Back To Top End ====== -->
 
     <!-- ====== All Javascript Files ====== -->
-    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/main.js"></script>
     <script>
