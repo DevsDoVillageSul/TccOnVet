@@ -188,6 +188,8 @@ return [
     "menu.cadastros.funcionarios" => "Funcionários",
     "menu.cadastros.tanques" => "Tanques",
     "menu.cadastros.pastagens" => "Pastagens",
+    "menu.cadastros.fornecedores" => "Fornecedores",
+    "menu.cadastros.areas" => "Áreas",
     "menu.duvida" => "Dúvidas Gerais",
     "menu.duvida.faqs" => "Faqs",
     "menu.protocolos" => "Protocolos",
