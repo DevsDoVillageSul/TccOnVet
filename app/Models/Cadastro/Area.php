@@ -18,11 +18,6 @@ class Area extends Model implements Auditable
         'reserva' => 'Reserva Legal e App',
     ];
 
-    public function contatos()
-    {
-        return $this->hasMany(FornecedorContato::class, 'fornecedor_id');
-    }
-
     public function scopeFiltros($query, $request)
     {
         if (isset($request->search) && $request->search != "") {
