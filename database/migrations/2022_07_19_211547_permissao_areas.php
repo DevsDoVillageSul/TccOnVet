@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class PermissionAreas extends Migration
+class PermissaoAreas extends Migration
 {
     /**
      * Run the migrations.
@@ -17,10 +17,10 @@ class PermissionAreas extends Migration
             [
                 'id' => '13',
                 'menu' => '1',
-                'position' => '7',
+                'position' => '5',
                 'permission_id' => 1,
                 'name' => 'menu.cadastros.areas',
-                'icon' => 'tag',
+                'icon' => 'thermometer',
                 'url' => 'cadastros/areas',
             ]
         );

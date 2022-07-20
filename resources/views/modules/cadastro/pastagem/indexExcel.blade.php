@@ -23,7 +23,7 @@
                     {{ $pastagem->dt_fim }}
                 </td>
                 <td>
-                    {{ $pastagem->dt_ini }}
+                    {{ $pastagem->area }}
                 </td>
                 <td>
                     {{ $pastagem->getTipo() }}
@@ -34,7 +34,7 @@
                 <td>
                     {{ $pastagem->total }}
                 </td>
-              </tr>   
+            </tr>
         @endforeach
     </tbody>
 </table>

@@ -1,6 +1,6 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Areas')
+@section('title', 'Áreas')
 
 @section('content')
     <form id="formAreaData" action="{{ url('data/cadastros/areas/save') }}" class="form">
@@ -17,7 +17,8 @@
                                 <div class="form-group">
                                     <label class="form-label" for="nome">Nome</label>
                                     <input type="text" name="nome" class="form-control" id="nome"
-                                        placeholder="Digite o Nome da área" value="{{ $area->nome ?? '' }}" required />
+                                        placeholder="Digite o Nome ou Descrição da Área" value="{{ $area->nome ?? '' }}"
+                                        required />
                                 </div>
                             </div>
                             <div class="col-md-6 col-12">
@@ -52,33 +53,23 @@
                             <div class="col-md-6 col-12">
                                 <div class="form-group">
                                     <label class="form-label" for="nome">Área (ha)</label>
-                                    <input type="text" name="ar" class="form-control" id="ar"
-                                        placeholder="Digite o tamanho da área" value="{{ $area->ar ?? '' }}" />
+                                    <input type="text" name="ha" class="form-control" id="ha"
+                                        placeholder="Digite o tamanho da área" value="{{ $area->ha ?? '' }}" />
                                 </div>
                             </div>
                             <div class="col-md-6 col-12">
                                 <div class="form-group">
-                                    <label class="form-label" for="nome">Vida Útil (Anos)</label>
+                                    <label class="form-label" for="nome">Vida útil(Anos)</label>
                                     <input type="text" name="util" class="form-control" id="util"
                                         value="{{ $area->util ?? '' }}" />
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 col-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="row">
                             <div class="col-md-6 col-12">
                                 <div class="form-group">
                                     <label class="form-label">Status</label>
                                     <div class="custom-control-primary custom-switch">
-                                        <input type="checkbox" name="ativo" class="custom-control-input"
-                                            id="ativo" value="1"
+                                        <input type="checkbox" name="ativo" class="custom-control-input" id="ativo"
+                                            value="1"
                                             {{ !isset($area->ativo) || (isset($area->ativo) && $area->ativo == 1) ? 'checked="checked"' : '' }}>
                                         <label class="custom-control-label" for="ativo">
                                             <span class="switch-icon-left">
@@ -92,6 +83,14 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="card">
+                    <div class="card-body">
                         <div class="row">&nbsp;</div>
                         <div class="row">
                             <div class="col-md-6 col-12">
@@ -118,5 +117,6 @@
                 postData('formAreaData', '{{ url('cadastros/areas') }}');
                 return false;
             });
+        });
     </script>
 @endsection

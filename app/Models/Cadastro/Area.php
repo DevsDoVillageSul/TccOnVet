@@ -12,10 +12,10 @@ class Area extends Model implements Auditable
 
     protected $table = "areas";
     protected $tipos = [
-        'arrendada' => 'Área arrendada',
-        'confinamento' => 'Área confinamento',
-        'outras' => 'Outras áreas para atividade',
-        'reserva' => 'Reserva Legal e App',
+        'ARRENDADA' => 'Área arrendada',
+        'CONFINAMENTO' => 'Área confinamento',
+        'OUTRAS' => 'Outras áreas para a atividade',
+        'RESERVA' => 'Reserva legal e APP',
     ];
 
     public function scopeFiltros($query, $request)
