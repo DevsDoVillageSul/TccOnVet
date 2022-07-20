@@ -63,8 +63,11 @@
                     <thead>
                         <tr>
                             <th>Nome</th>
-                            <th>Área</th>
-                            <th>Vida útil</th>
+                            <th>Tipo</th>
+                            <th>Inicio</th>
+                            <th>Finalizada</th>
+                            <th>Área(ha)</th>
+                            <th>Vida Útil(Anos)</th>
                             <th style="width: 5%;">Status</th>
                             <th style="width: 5%;">Ações</th>
                         </tr>
@@ -76,18 +79,28 @@
                                 {{ $area->nome }}
                             </td>
                             <td>
-                                {{ $area->ar }}
+                                {{ $area->getTipo() }}
                             </td>
                             <td>
+                                {{ $area->dt_ini }}
+                            </td>
+                            <td>
+                                {{ $area->dt_fim }}
+                            </td>
+                             <td>
+                                {{ $area->ha }}
+                            </td>
+                             <td>
                                 {{ $area->util }}
                             </td>
                             <td>
                                 {!! Helper::getAtivoInativo($area->ativo) !!}
                             </td>
+                            
                             <td nowrap>
                                 <a href="{{ url('cadastros/areas/create') }}/{{ $area->id ?? null }}"
                                     class="btn btn-icon btn-outline-primary waves-effect" title="Editar">
-                                    <i data-feather="edit-2"></i>
+                                    <i data-feather="edit-2"></i>1
                                 </a>
                                 <a href="javascript:void(0);" class="btn btn-icon btn-outline-warning waves-effect"
                                     alt="Apagar" title="Apagar"

@@ -16,11 +16,11 @@ class CreateAreas extends Migration
         Schema::create('areas', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 50);
-            $table->string('tipo', 50); 
             $table->string('dt_ini', 20);
             $table->string('dt_fim', 20);
-            $table->string('ar', 50);
-            $table->string('util', 20);
+            $table->string('tipo', 20);
+            $table->integer('ha');
+            $table->integer('util');
             $table->tinyInteger('ativo');
             $table->timestamps();
         });

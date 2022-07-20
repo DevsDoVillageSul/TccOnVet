@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\Cadastro;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Exports\ExcelExport;
 use App\Models\Cadastro\Area;
 use Maatwebsite\Excel\Facades\Excel;
@@ -19,10 +19,11 @@ class AreaController extends Controller
 
     public function index(Request $request)
     {
+       
         $breadcrumbs = $this->breadcrumbs;
         $areas = Area::filtros($request)        
-        ->orderBy('id', 'DESC')
-    ;
+            ->orderBy('id', 'DESC')
+        ;
 
         if (isset($request->export) && $request->export == 'PDF') {
             return $this->indexPdf($areas);
@@ -34,28 +35,8 @@ class AreaController extends Controller
 
         $areas = $areas->paginate(config('app.paginate'));
 
-
         $dataView = compact('breadcrumbs', 'request', 'areas');
-        return view('modules/cadastro/area/index', $dataView);       
-
-    }
-    private function indexPdf($areas)
-    {
-        $areas = $areas->get();
-        return \PDF::loadView('modules/cadastro/area/indexPdf', compact('areas'))
-            ->setPaper('a4')
-            ->download('Areas.pdf')
-        ;
-    }
-
-    private function indexExcel($areas)
-    {
-        $areas = $areas->get();
-        $view = 'modules/cadastro/area/indexExcel';
-        $arquivo = 'areas.xlsx';
-        $dados = ['areas' => $areas];
-
-        return Excel::download(new ExcelExport($view, $dados), $arquivo);
+        return view('modules/cadastro/area/index', $dataView);  
     }
 
     public function destroy($id)
@@ -63,9 +44,9 @@ class AreaController extends Controller
         try {
             $area = $this->model::findOrFail($id);
             $area->delete();
-            session()->flash('flash_message', 'Apagado com Sucesso!');
+            session()->flash('flash_message', 'A área foi apagada com sucesso!');
         } catch (\Exception $ex) {
-            session()->flash('error_message', 'Erro ao Remover!');
+            session()->flash('error_message', 'Erro ao Remover a Área!');
         }
         return redirect('cadastros/areas');
     }
@@ -75,7 +56,6 @@ class AreaController extends Controller
         $breadcrumbs = $this->breadcrumbs;
         $area = $this->model::findOrNew($id);
         $dataView = compact('breadcrumbs', 'area');
-        return view('modules/cadastro/area/create', $dataView);
-    
+        return view('modules/cadastro/area/create', $dataView);       
     }
 }

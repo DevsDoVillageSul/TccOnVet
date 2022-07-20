@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Data\Cadastro;
 
 use App\Http\Controllers\Controller;
 use App\Models\Cadastro\Area;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
-
 use Exception;
 
 class AreaController extends Controller
@@ -19,16 +19,14 @@ class AreaController extends Controller
             $area->tipo = $request->tipo;
             $area->dt_ini = $request->dt_ini;
             $area->dt_fim = $request->dt_fim;
-            $area->ar = $request->ar;
+            $area->ha = $request->ha;
             $area->util = $request->util;
             $area->ativo = $request->ativo ?? 0;
-        
-            $area->save(); 
+            $area->save();
             return $area;
-
         } catch (Exception $ex) {
             return response()->json([
-                'message' => 'Ocorreu um Erro ao salvar !',
+                'message' => 'Ocorreu um Erro ao salvar a área!',
                 'exception' => $ex->getMessage()
             ], 404);
         }
