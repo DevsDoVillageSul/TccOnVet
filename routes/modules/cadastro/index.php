@@ -4,6 +4,7 @@ use App\Http\Controllers\Cadastro\FuncionarioController;
 use App\Http\Controllers\Cadastro\FornecedorController;
 use App\Http\Controllers\Cadastro\TanqueController;
 use App\Http\Controllers\Cadastro\AreaController;
+use App\Http\Controllers\Cadastro\CulturaController;
 use App\Http\Controllers\Cadastro\IatfController;
 use App\Http\Controllers\Cadastro\PastagemController;
 
@@ -77,6 +78,24 @@ Route::group(['prefix' => 'cadastros'], function () {
         Route::get('/create/{id}', [AreaController::class, 'create'])
             ->name('areas-create')
             ->middleware('checkPermission:13')
+        ;
+    });
+
+    Route::group(['prefix' => 'culturas'], function () {
+        // listagem
+        Route::any('/', [CulturaController::class, 'index'])
+            ->name('culturas-index')
+            ->middleware('checkPermission:15')
+        ;
+        // delete
+        Route::get('/delete/{id}', [CulturaController::class, 'destroy'])
+            ->name('culturas-destroy')
+            ->middleware('checkPermission:15')   
+        ;
+        // create
+        Route::get('/create/{id}', [CulturaController::class, 'create'])
+            ->name('culturas-create')
+            ->middleware('checkPermission:15')
         ;
     });
 
