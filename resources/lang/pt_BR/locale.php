@@ -190,6 +190,7 @@ return [
     "menu.cadastros.pastagens" => "Pastagens",
     "menu.cadastros.fornecedores" => "Fornecedores",
     "menu.cadastros.areas" => "Áreas",
+    "menu.cadastros.culturas" => "Culturas",
     "menu.duvida" => "Dúvidas Gerais",
     "menu.duvida.faqs" => "Faqs",
     "menu.protocolos" => "Protocolos",
