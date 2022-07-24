@@ -48,5 +48,6 @@ Route::middleware(['auth'])->group(function () {
     include('modules/tema.php');
     include('modules/data/endpoints.php');
     include('modules/duvida/index.php');
+    include('modules/rebanho/index.php');
     include('modules/protocolo/index.php');
 });

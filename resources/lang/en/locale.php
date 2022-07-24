@@ -197,4 +197,6 @@ return [
     "menu.protocolos.inducoes" => "Indução",
     "menu.protocolos.tes" => "TE",
     "menu.protocolos.iatfs" => "IATF",
+    "menu.rebanho" => "Rebanhos",
+    "menu.rebanho.lotes" => "Lotes",
 ];
