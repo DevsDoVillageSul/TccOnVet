@@ -199,4 +199,5 @@ return [
     "menu.protocolos.iatfs" => "IATF",
     "menu.rebanho" => "Rebanhos",
     "menu.rebanho.lotes" => "Lotes",
+    "menu.rebanho.animais" => "Animais",
 ];
