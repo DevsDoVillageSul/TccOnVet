@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCadastrosFornecedores extends Migration
+class CreateCadastrosFuncionarios extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateCadastrosFornecedores extends Migration
      */
     public function up()
     {
-        Schema::create('fornecedor', function (Blueprint $table) {
+        Schema::create('funcionario', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 100); 
-            $table->string('cpf', 20)->nullable(); 
-            $table->string('cnpj', 20)->nullable(); 
-            $table->string('razao', 50); 
-            $table->string('tipo', 20); 
-            $table->string('email')->nullable();   
-            $table->string('telefone', 11); 
+            $table->string('nome', 100);
+            $table->string('cpf', 50);
+            $table->string('dt_nasc', 20);
+            $table->string('sexo', 10);
+            $table->string('funcao', 20);
+            $table->string('telefone', 11);
             $table->string('cep', 10);
             $table->string('endereco', 100);
             $table->string('numero', 50);
@@ -41,6 +40,6 @@ class CreateCadastrosFornecedores extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fornecedor');
+        Schema::dropIfExists('funcionario');
     }
 }
