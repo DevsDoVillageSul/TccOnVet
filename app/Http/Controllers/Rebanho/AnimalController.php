@@ -9,6 +9,7 @@ use App\Models\Rebanho\Lote;
 use App\Models\Cadastro\Fornecedor;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\DB;
 
 class AnimalController extends Controller
 {
@@ -38,8 +39,17 @@ class AnimalController extends Controller
         ->with('fornecedor:id,nome')
         ->paginate(config('app.paginate'));
 
+        $resume = $this->model::filtros($request)
+        ->select(
+            DB::raw('SUM(IF(ativo = 1, 1 ,0)) as ativos'),
+            DB::raw('SUM(IF(ativo = 0, 1 ,0)) as inativos')
+        )
+        ->where('id', '>', 1)
+        ->first()
+    ;
 
-        $dataView = compact('breadcrumbs', 'request', 'animais');
+
+        $dataView = compact('breadcrumbs', 'request', 'animais', 'resume');
         return view('modules/rebanho/animal/index', $dataView);
     }
 
