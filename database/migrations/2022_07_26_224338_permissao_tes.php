@@ -15,7 +15,7 @@ class PermissaoTes extends Migration
                 'position' => '1',
                 'permission_id' => 5,
                 'name' => 'menu.protocolos.tes',
-                'icon' => 'arrow_right',
+                'icon' => 'arrow-right',
                 'url' => 'protocolos/tes',
             ]
         );

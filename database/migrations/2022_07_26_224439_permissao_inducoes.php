@@ -15,7 +15,7 @@ class PermissaoInducoes extends Migration
                 'position' => '1',
                 'permission_id' => 5,
                 'name' => 'menu.protocolos.inducoes',
-                'icon' => 'arrow_right',
+                'icon' => 'arrow-right',
                 'url' => 'protocolos/inducoes',
             ]
         );
