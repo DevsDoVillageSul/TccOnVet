@@ -25,6 +25,6 @@ class PermissaoDuvida extends Migration
     {
         DB::table('role_permissions')->where('permission_id', 7)->delete();
 
-        DB::table('permissions')->where('id',7)->delete();
+        DB::table('permissions')->where('id', 7)->delete();
     }
 }
