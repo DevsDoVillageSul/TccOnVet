@@ -28,7 +28,7 @@ Route::get('/error', function () {
 });
 
 
-Route::get('/loginNovo', function () {
+Route::get('/login', function () {
     return redirect('dashboard');
 })->name('home');
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
