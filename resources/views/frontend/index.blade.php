@@ -65,7 +65,7 @@
                         </div>
 
                         <div class="navbar-btn d-none d-sm-inline-block">
-                            <a href="/loginNovo" class="ud-main-btn ud-login-btn">
+                            <a href="http://localhost/onvet/public/login" class="ud-main-btn ud-login-btn">
                                 Ir para aplicação
                             </a>
                             <a href="/cadastre-se" class="ud-main-btn ud-white-btn">
